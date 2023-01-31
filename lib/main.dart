@@ -15,8 +15,12 @@ class MyApp extends StatelessWidget {
       title: 'FlipKart',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          // ignore: prefer_const_constructors
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white,
+          ),
+          backgroundColor: Colors.white),
       home: const ScreenMain(),
     );
   }
