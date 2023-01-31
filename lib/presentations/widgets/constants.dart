@@ -10,4 +10,7 @@ class Constants {
   static const Widget height5 = SizedBox(
     height: 5,
   );
+
+  // Colors
+  static const Color customBlue = Color.fromARGB(255, 0, 115, 255);
 }
