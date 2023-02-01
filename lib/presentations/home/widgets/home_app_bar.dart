@@ -108,6 +108,7 @@ class HomeAppBar extends StatelessWidget {
                     onTap: () {},
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      // SearchBox Design
                       child: Container(
                         height: 40,
                         decoration: BoxDecoration(
