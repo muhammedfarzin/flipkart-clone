@@ -8,10 +8,24 @@ class ScreenHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      body: const SafeArea(
+      body: SafeArea(
         child: CustomScrollView(
           slivers: [
-            HomeAppBar(),
+            const HomeAppBar(),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  AspectRatio(
+                    aspectRatio: 20 / 9,
+                    child: Container(
+                      color: Colors.lightGreen,
+                      height: 50,
+                      width: double.infinity,
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
