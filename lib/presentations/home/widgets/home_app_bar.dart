@@ -54,6 +54,7 @@ class HomeAppBar extends StatelessWidget {
         preferredSize: const Size(double.infinity, 54),
         child: Row(
           children: [
+            // Brand Mall Toggle
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 10),
               child: Column(
@@ -88,7 +89,7 @@ class HomeAppBar extends StatelessWidget {
                     inactiveTextFontWeight: FontWeight.w500,
                     inactiveTextColor: Colors.black,
 
-                    // Inactive Design
+                    // Active Design
                     activeColor: Colors.black,
                     activeText: "ON",
                     activeTextFontWeight: FontWeight.w500,
@@ -97,6 +98,7 @@ class HomeAppBar extends StatelessWidget {
                 ],
               ),
             ),
+            // Search Box
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
