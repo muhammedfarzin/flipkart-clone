@@ -1,4 +1,5 @@
 import 'package:flipkart/presentations/main/screen_main.dart';
+import 'package:flipkart/presentations/widgets/custom_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,10 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.white,
           ),
           backgroundColor: Colors.white),
-      home: const ScreenMain(),
+      home: ScrollConfiguration(
+        behavior: CustomScrollBehavior(),
+        child: const ScreenMain(),
+      ),
     );
   }
 }
