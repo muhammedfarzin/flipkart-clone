@@ -1,3 +1,4 @@
+import 'package:flipkart/presentations/home/widgets/home_action_button_list.dart';
 import 'package:flipkart/presentations/home/widgets/home_app_bar.dart';
 import "package:flutter/material.dart";
 
@@ -15,6 +16,7 @@ class ScreenHome extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
+                  // Live Sales and Offers Banner
                   AspectRatio(
                     aspectRatio: 20 / 9,
                     child: Container(
@@ -22,7 +24,10 @@ class ScreenHome extends StatelessWidget {
                       height: 50,
                       width: double.infinity,
                     ),
-                  )
+                  ),
+
+                  // Buttons like supercoin and offers
+                  const HomeActionButtonList()
                 ],
               ),
             ),
