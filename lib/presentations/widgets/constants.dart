@@ -1,18 +1,26 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class Constants {
-  // Width Constants
+  // ------------------Seperator-------------------
+  // Width Seperator
   static const Widget width8 = SizedBox(
     width: 8,
   );
 
-  // Height Constants
+  // Height Seperator
   static const Widget height5 = SizedBox(
     height: 5,
   );
 
   static const Widget height10 = SizedBox(
     height: 10,
+  );
+
+  // Line Seperator
+  static Widget lineH1 = Container(
+    color: Colors.grey.shade100,
+    height: 1,
+    width: double.infinity,
   );
 
   // --------------------Colors--------------------
