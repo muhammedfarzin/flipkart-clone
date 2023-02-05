@@ -10,6 +10,8 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      floating: true,
+      pinned: true,
       actions: [
         SizedBox(
           width: MediaQuery.of(context).size.width / 2,
@@ -51,7 +53,7 @@ class HomeAppBar extends StatelessWidget {
 
       // AppBar Bottom
       bottom: PreferredSize(
-        preferredSize: const Size(double.infinity, 54),
+        preferredSize: const Size(double.infinity, 56),
         child: Row(
           children: [
             // Brand Mall Toggle
