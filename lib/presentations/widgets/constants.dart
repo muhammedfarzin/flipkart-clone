@@ -8,6 +8,10 @@ class Constants {
   );
 
   // Height Seperator
+  static const Widget height2 = SizedBox(
+    height: 2,
+  );
+
   static const Widget height5 = SizedBox(
     height: 5,
   );
@@ -31,4 +35,9 @@ class Constants {
 
   // Green Shades
   static const Color customGreen = Color.fromARGB(255, 0, 136, 122);
+
+  // --------------------Border--------------------
+
+  static Border outlinedBorder =
+      Border.all(width: 1, color: Colors.grey.shade300);
 }
