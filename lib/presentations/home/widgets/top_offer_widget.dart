@@ -60,7 +60,7 @@ class TopOfferWidget extends StatelessWidget {
                               end: Alignment.topCenter,
                               stops: [0, 0.6],
                               colors: [
-                                Color.fromARGB(69, 158, 158, 158),
+                                Color.fromARGB(69, 137, 137, 255),
                                 Colors.transparent,
                               ],
                             ),
