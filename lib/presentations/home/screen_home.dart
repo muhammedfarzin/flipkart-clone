@@ -32,7 +32,7 @@ class ScreenHome extends StatelessWidget {
                   // Buttons like supercoin and offers
                   const HomeActionButtonList(),
 
-                  Constants.lineH1,
+                  Constants.lineH1Light,
 
                   // Top Offers
                   Row(

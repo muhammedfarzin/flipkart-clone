@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 class Constants {
   // ------------------Seperator-------------------
   // Width Seperator
+  static const Widget width3 = SizedBox(
+    width: 3,
+  );
+
   static const Widget width8 = SizedBox(
     width: 8,
   );
@@ -22,6 +26,12 @@ class Constants {
 
   // Line Seperator
   static Widget lineH1 = Container(
+    color: Colors.grey.shade300,
+    height: 1,
+    width: double.infinity,
+  );
+
+  static Widget lineH1Light = Container(
     color: Colors.grey.shade100,
     height: 1,
     width: double.infinity,
