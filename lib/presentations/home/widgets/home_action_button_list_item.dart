@@ -14,9 +14,11 @@ class HomeActionButtonListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 22.0,
-        horizontal: 6.5,
+      padding: const EdgeInsets.only(
+        top: 22.0,
+        right: 6.5,
+        bottom: 15.0,
+        left: 6.5,
       ),
       child: Column(
         children: [
