@@ -7,10 +7,12 @@ class IconLabelButtonOutlined extends StatelessWidget {
     super.key,
     required this.icon,
     required this.label,
+    this.textStyle,
   });
 
   final String icon;
   final String label;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +32,21 @@ class IconLabelButtonOutlined extends StatelessWidget {
             ),
             child: Row(
               children: [
+                // Icon
                 CustomIcon(
                   icon: icon,
+                ),
+
+                Constants.width8,
+
+                // Label
+                Text(
+                  label,
+                  style: textStyle ??
+                      const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
               ],
             ),
