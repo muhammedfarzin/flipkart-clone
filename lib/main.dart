@@ -16,6 +16,13 @@ class MyApp extends StatelessWidget {
       title: 'FlipKart',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+          textTheme: const TextTheme(
+            displayLarge: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 17,
+              color: Colors.black,
+            ),
+          ),
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
           ),
