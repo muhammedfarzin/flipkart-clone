@@ -16,12 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'FlipKart',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          // ignore: prefer_const_constructors
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
           ),
-          backgroundColor: Colors.white),
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+              .copyWith(background: Colors.white)),
       home: ScrollConfiguration(
         behavior: CustomScrollBehavior(),
         child: const ScreenMain(),
