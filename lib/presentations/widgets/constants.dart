@@ -41,6 +41,7 @@ class Constants {
 
   // Blue Shades
   static const Color customBlue = Color.fromARGB(255, 0, 115, 255);
+  static Color customDeepBlue = Colors.blue.shade700;
   static const Color customLightBlueShade = Color.fromARGB(255, 241, 245, 255);
 
   // Green Shades
@@ -48,6 +49,13 @@ class Constants {
 
   // --------------------Border--------------------
 
-  static Border outlinedBorder =
-      Border.all(width: 1, color: Colors.grey.shade300);
+  static Border outlinedBorder = Border.all(
+    width: 1,
+    color: Colors.grey.shade300,
+  );
+
+  static Border outlinedBorder2 = Border.all(
+    width: 1.3,
+    color: Colors.grey.shade300,
+  );
 }
