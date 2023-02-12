@@ -11,6 +11,10 @@ class Constants {
     width: 8,
   );
 
+  static const Widget width15 = SizedBox(
+    width: 15,
+  );
+
   // Height Seperator
   static const Widget height2 = SizedBox(
     height: 2,
@@ -22,6 +26,10 @@ class Constants {
 
   static const Widget height10 = SizedBox(
     height: 10,
+  );
+
+  static const Widget height15 = SizedBox(
+    height: 15,
   );
 
   // Line Seperator
