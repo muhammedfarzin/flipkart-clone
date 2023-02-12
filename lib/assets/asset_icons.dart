@@ -4,5 +4,5 @@ class AssetIcons {
   static const headset = "assets/icons/headset.png";
   static const heart = "assets/icons/heart.png";
   static const package = "assets/icons/package.png";
-  static const payLater = "assets/icons/payLater.png";
+  static const payLater = "assets/icons/pay-later.png";
 }
