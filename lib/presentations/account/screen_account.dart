@@ -1,3 +1,5 @@
+import 'package:flipkart/assets/asset_icons.dart';
+import 'package:flipkart/presentations/account/widgets/icon_label_button_outlined.dart';
 import 'package:flipkart/presentations/widgets/constants.dart';
 import "package:flutter/material.dart";
 
@@ -48,7 +50,7 @@ class ScreenAccount extends StatelessWidget {
                               Text(
                                 " Flipkart",
                                 style: TextStyle(
-                                  color: Colors.blue.shade700,
+                                  color: Constants.customDeepBlue,
                                   fontStyle: FontStyle.italic,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15,
@@ -111,7 +113,45 @@ class ScreenAccount extends StatelessWidget {
             ),
             Constants.lineH1,
 
-            //
+            // Buttons Like Orders and Wishlist
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Row(
+                children: const [
+                  Flexible(
+                    child: IconLabelButtonOutlined(
+                      icon: AssetIcons.package,
+                      label: "Orders",
+                    ),
+                  ),
+                  Flexible(
+                    child: IconLabelButtonOutlined(
+                      icon: AssetIcons.heart,
+                      label: "Wishlist",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Row(
+                children: const [
+                  Flexible(
+                    child: IconLabelButtonOutlined(
+                      icon: AssetIcons.gift,
+                      label: "Coupons",
+                    ),
+                  ),
+                  Flexible(
+                    child: IconLabelButtonOutlined(
+                      icon: AssetIcons.headset,
+                      label: "Help Center",
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
