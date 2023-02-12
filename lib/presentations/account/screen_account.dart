@@ -1,6 +1,7 @@
 import 'package:flipkart/assets/asset_icons.dart';
 import 'package:flipkart/presentations/account/widgets/icon_label_button_outlined.dart';
 import 'package:flipkart/presentations/widgets/constants.dart';
+import 'package:flipkart/presentations/widgets/custom_list_tile.dart';
 import "package:flutter/material.dart";
 
 class ScreenAccount extends StatelessWidget {
@@ -14,15 +15,7 @@ class ScreenAccount extends StatelessWidget {
         child: ListView(
           children: [
             Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.grey.shade300,
-                    width: 2,
-                  ),
-                ),
-              ),
+              decoration: Constants.cardBoxDecoration,
               child: Column(
                 children: [
                   Padding(
@@ -43,12 +36,10 @@ class ScreenAccount extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // Salutation
-                                const Text(
+                                Text(
                                   "Hey, Username",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 17,
-                                  ),
+                                  style:
+                                      Theme.of(context).textTheme.displayLarge,
                                 ),
                                 Constants.height10,
                                 Row(
@@ -147,7 +138,11 @@ class ScreenAccount extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: const EdgeInsets.only(
+                      left: 8.0,
+                      right: 8.0,
+                      bottom: 12.0,
+                    ),
                     child: Row(
                       children: const [
                         Flexible(
@@ -167,7 +162,38 @@ class ScreenAccount extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            Constants.height5,
+
+            // Credit Options
+            Container(
+              decoration: Constants.cardBoxDecoration,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title
+                    Text(
+                      "Credit Options",
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.card,
+                      title: "Flipkart Axis Bank Credit Card",
+                      subtitle: "Apply & enter world of unlimited benefits!",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.payLater,
+                      title: "Flipkart Pay Later",
+                      subtitle: "Complete application & get ₹500* gift card",
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
