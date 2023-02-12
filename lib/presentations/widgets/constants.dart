@@ -58,4 +58,15 @@ class Constants {
     width: 1.3,
     color: Colors.grey.shade300,
   );
+
+  // ----------------Box Decoration----------------
+  static BoxDecoration cardBoxDecoration = BoxDecoration(
+    color: Colors.white,
+    border: Border(
+      bottom: BorderSide(
+        color: Colors.grey.shade300,
+        width: 2,
+      ),
+    ),
+  );
 }
