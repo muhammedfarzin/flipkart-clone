@@ -194,6 +194,56 @@ class ScreenAccount extends StatelessWidget {
                 ),
               ),
             ),
+            Constants.height5,
+
+            // Account Settings
+            Container(
+              decoration: Constants.cardBoxDecoration,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title
+                    Text(
+                      "Account Settings",
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.card,
+                      title: "Flipkart Plus",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.user,
+                      title: "Edit Profile",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.wallet,
+                      title: "Saved Cards & Wallet",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.location,
+                      title: "Saved Addresses",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.languages,
+                      title: "Select Language",
+                      iconScale: 12.5,
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.notificationSettings,
+                      title: "Notification",
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
