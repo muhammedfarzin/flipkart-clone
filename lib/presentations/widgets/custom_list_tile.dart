@@ -8,56 +8,72 @@ class CustomListTile extends StatelessWidget {
     required this.icon,
     required this.title,
     this.subtitle,
+    this.iconScale = 25,
+    this.titleStyle,
+    this.subtitleStyle,
   });
 
   final String icon;
   final String title;
   final String? subtitle;
+  final double iconScale;
+  final TextStyle? titleStyle;
+  final TextStyle? subtitleStyle;
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: () {},
-        child: Row(
-          children: [
-            CustomIcon(
-              icon: icon,
-              scale: 20,
-            ),
-            Constants.width15,
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 15,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Constants.height5,
-                  subtitle == null
-                      ? const SizedBox()
-                      : Text(
-                          subtitle!,
-                          style: const TextStyle(
-                            fontSize: 13,
-                            color: Colors.grey,
-                          ),
-                        ),
-                ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 1.0),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {},
+          child: Row(
+            children: [
+              CustomIcon(
+                icon: icon,
+                scale: iconScale,
               ),
-            ),
+              Constants.width15,
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title
+                    Text(
+                      title,
+                      style: titleStyle ??
+                          const TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                          ),
+                    ),
+                    Constants.height5,
 
-            // Arrow Icon
-            const Icon(
-              Icons.keyboard_arrow_right_rounded,
-              size: 20,
-            ),
-          ],
+                    // Subtitle
+                    subtitle == null
+                        ? const SizedBox()
+                        : Text(
+                            subtitle!,
+                            style: subtitleStyle ??
+                                const TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey,
+                                ),
+                          ),
+                  ],
+                ),
+              ),
+
+              // Arrow Icon
+              const Icon(
+                Icons.keyboard_arrow_right_rounded,
+                size: 20,
+              ),
+            ],
+          ),
         ),
       ),
     );
