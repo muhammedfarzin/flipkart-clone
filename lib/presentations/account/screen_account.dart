@@ -244,6 +244,35 @@ class ScreenAccount extends StatelessWidget {
                 ),
               ),
             ),
+            Constants.height5,
+
+            // My Activity
+            Container(
+              decoration: Constants.cardBoxDecoration,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title
+                    Text(
+                      "My Activity",
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.editing,
+                      title: "Reviews",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.chat,
+                      title: "Questions & Answers",
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
