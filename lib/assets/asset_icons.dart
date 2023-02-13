@@ -14,4 +14,5 @@ class AssetIcons {
   static const star = "assets/icons/star.png";
   static const user = "assets/icons/user.png";
   static const wallet = "assets/icons/wallet.png";
+  static const information = "assets/icons/information.png";
 }
