@@ -15,4 +15,6 @@ class AssetIcons {
   static const user = "assets/icons/user.png";
   static const wallet = "assets/icons/wallet.png";
   static const information = "assets/icons/information.png";
+  static const documents = "assets/icons/documents.png";
+  static const flipkartPlus = "assets/icons/flipkart-plus.png";
 }
