@@ -1,3 +1,4 @@
+import 'package:flipkart/assets/flipkart_icons.dart';
 import 'package:flipkart/presentations/widgets/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
@@ -28,6 +29,12 @@ class HomeAppBar extends StatelessWidget {
                 color: Constants.customBlue,
               ),
               width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: Image.asset(
+                  FlipkartIcons.flipkartBanner,
+                ),
+              ),
             ),
           ),
         ),
@@ -46,6 +53,10 @@ class HomeAppBar extends StatelessWidget {
                 color: Colors.grey.shade100,
               ),
               width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: Image.asset(FlipkartIcons.groceryBanner),
+              ),
             ),
           ),
         ),
