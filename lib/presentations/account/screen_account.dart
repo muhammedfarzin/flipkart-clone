@@ -273,6 +273,64 @@ class ScreenAccount extends StatelessWidget {
                 ),
               ),
             ),
+            Constants.height5,
+
+            // Earn with Flipkart
+            Container(
+              decoration: Constants.cardBoxDecoration,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title
+                    Text(
+                      "Earn with Flipkart",
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.star,
+                      title: "Flipkart Creator Studio",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.shop,
+                      title: "Sell on Flipkart",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Constants.height5,
+
+            // Feedback & Information
+            Container(
+              decoration: Constants.cardBoxDecoration,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title
+                    Text(
+                      "Feedback & Information",
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.documents,
+                      title: "Terms, Policies and Licenses",
+                    ),
+                    Constants.height15,
+                    const CustomListTile(
+                      icon: AssetIcons.information,
+                      title: "Browse FAQs",
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
