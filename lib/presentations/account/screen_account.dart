@@ -211,7 +211,7 @@ class ScreenAccount extends StatelessWidget {
                     ),
                     Constants.height15,
                     const CustomListTile(
-                      icon: AssetIcons.card,
+                      icon: AssetIcons.flipkartPlus,
                       title: "Flipkart Plus",
                     ),
                     Constants.height15,
