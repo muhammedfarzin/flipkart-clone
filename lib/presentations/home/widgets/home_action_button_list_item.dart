@@ -4,12 +4,16 @@ import 'package:flutter/material.dart';
 class HomeActionButtonListItem extends StatelessWidget {
   const HomeActionButtonListItem({
     Key? key,
+    required this.icon,
     required this.label,
     this.badgeValue,
+    this.iconScale = 15,
   }) : super(key: key);
 
+  final String icon;
   final String label;
   final String? badgeValue;
+  final double iconScale;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +30,13 @@ class HomeActionButtonListItem extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               // Button Image
-              const CircleAvatar(
+              CircleAvatar(
                 backgroundColor: Constants.customLightBlueShade,
                 radius: 30,
+                child: Image.asset(
+                  icon,
+                  scale: iconScale,
+                ),
               ),
 
               // Badge
