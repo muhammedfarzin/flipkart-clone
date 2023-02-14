@@ -331,6 +331,41 @@ class ScreenAccount extends StatelessWidget {
                 ),
               ),
             ),
+
+            // Logout Button
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                    // Background Color
+                    backgroundColor: MaterialStateProperty.resolveWith(
+                        (states) => Theme.of(context).colorScheme.background),
+
+                    // Overlay Color
+                    overlayColor: MaterialStateProperty.resolveWith(
+                        (states) => Colors.grey.withOpacity(0.2)),
+
+                    // Border
+                    side: MaterialStateProperty.resolveWith(
+                      (states) => BorderSide(
+                        color: Colors.grey.shade300,
+                        width: 1,
+                      ),
+                    ),
+
+                    // Elevation
+                    elevation:
+                        MaterialStateProperty.resolveWith((states) => 0)),
+                child: Text(
+                  "Log Out",
+                  style: TextStyle(
+                    color: Constants.customDeepBlue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
