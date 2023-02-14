@@ -1,4 +1,5 @@
 import 'package:flipkart/assets/asset_icons.dart';
+import 'package:flipkart/assets/flipkart_icons.dart';
 import 'package:flipkart/presentations/account/widgets/icon_label_button_outlined.dart';
 import 'package:flipkart/presentations/widgets/constants.dart';
 import 'package:flipkart/presentations/widgets/custom_list_tile.dart';
@@ -68,6 +69,13 @@ class ScreenAccount extends StatelessWidget {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 15,
                                       ),
+                                    ),
+                                    Constants.width3,
+
+                                    // Flipkart Plus Icon (Color)
+                                    SizedBox(
+                                      width: 12,
+                                      child: Image.asset(FlipkartIcons.plus),
                                     ),
                                     const Icon(
                                       Icons.keyboard_arrow_right,
