@@ -8,12 +8,14 @@ class HomeActionButtonListItem extends StatelessWidget {
     required this.label,
     this.badgeValue,
     this.iconScale = 15,
+    this.spacing = 10,
   }) : super(key: key);
 
   final String icon;
   final String label;
   final String? badgeValue;
   final double iconScale;
+  final double spacing;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +69,9 @@ class HomeActionButtonListItem extends StatelessWidget {
                     ),
             ],
           ),
-          Constants.height10,
+          SizedBox(
+            height: spacing,
+          ),
 
           // Label
           Text(
