@@ -44,6 +44,43 @@ class ScreenCategories extends StatelessWidget {
                 ],
               ),
 
+              SliverList(
+                delegate: SliverChildListDelegate([
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        // Offer Zone
+                        GridViewCategoryItem(
+                          icon: CategoryIcons.offerZone,
+                          label: "Offer Zone",
+                        ),
+
+                        // Grocery
+                        GridViewCategoryItem(
+                          icon: CategoryIcons.grocery,
+                          label: "Grocery",
+                        ),
+
+                        // Mobiles
+                        GridViewCategoryItem(
+                          icon: CategoryIcons.mobiles,
+                          label: "Mobiles",
+                        ),
+
+                        // Fashion
+                        GridViewCategoryItem(
+                          icon: CategoryIcons.fasion,
+                          label: "Fashion",
+                        ),
+                      ],
+                    ),
+                  ),
+                  Constants.lineH1Light,
+                ]),
+              ),
+
               // Categories Grid
               SliverPadding(
                 padding: const EdgeInsets.all(8.0),
@@ -55,30 +92,6 @@ class ScreenCategories extends StatelessWidget {
                     childAspectRatio: 1 / 1.2,
                   ),
                   delegate: SliverChildListDelegate([
-                    // Offer Zone
-                    const GridViewCategoryItem(
-                      icon: CategoryIcons.offerZone,
-                      label: "Offer Zone",
-                    ),
-
-                    // Grocery
-                    const GridViewCategoryItem(
-                      icon: CategoryIcons.grocery,
-                      label: "Grocery",
-                    ),
-
-                    // Mobiles
-                    const GridViewCategoryItem(
-                      icon: CategoryIcons.mobiles,
-                      label: "Mobiles",
-                    ),
-
-                    // Fashion
-                    const GridViewCategoryItem(
-                      icon: CategoryIcons.fasion,
-                      label: "Fashion",
-                    ),
-
                     // Electronics
                     const GridViewCategoryItem(
                       icon: CategoryIcons.electronics,
