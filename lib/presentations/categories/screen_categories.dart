@@ -44,6 +44,7 @@ class ScreenCategories extends StatelessWidget {
                 ],
               ),
 
+              // Top Four Category
               SliverList(
                 delegate: SliverChildListDelegate([
                   Padding(
@@ -186,6 +187,7 @@ class ScreenCategories extends StatelessWidget {
                   ]),
                 ),
               ),
+
             ],
           ),
         ),
