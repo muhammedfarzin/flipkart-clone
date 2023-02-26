@@ -10,6 +10,9 @@ class GridViewCategoryItem extends StatelessWidget {
     this.iconScale,
     this.labelStyle,
     this.badgeColor,
+    this.circleColor = Colors.blue,
+    this.circleRadius = 35,
+    this.imagePadding = 0,
   });
 
   final String icon;
@@ -19,6 +22,9 @@ class GridViewCategoryItem extends StatelessWidget {
   final double? iconScale;
   final TextStyle? labelStyle;
   final Color? badgeColor;
+  final Color circleColor;
+  final double circleRadius;
+  final double imagePadding;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +33,16 @@ class GridViewCategoryItem extends StatelessWidget {
         Stack(
           clipBehavior: Clip.none,
           children: [
-            Image.asset(
-              icon,
-              scale: iconScale ?? 7,
+            CircleAvatar(
+              radius: circleRadius,
+              backgroundColor: circleColor,
+              child: Padding(
+                padding: EdgeInsets.all(imagePadding),
+                child: Image.asset(
+                  icon,
+                  scale: iconScale ?? 7,
+                ),
+              ),
             ),
 
             // Badge
