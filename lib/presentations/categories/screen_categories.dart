@@ -1,4 +1,5 @@
 import "package:flipkart/assets/category_icons.dart";
+import "package:flipkart/assets/flipkart_icons.dart";
 import "package:flipkart/presentations/categories/grid_view_category_item.dart";
 import "package:flipkart/presentations/widgets/constants.dart";
 import "package:flutter/material.dart";
@@ -188,6 +189,102 @@ class ScreenCategories extends StatelessWidget {
                 ),
               ),
 
+              // More on Flipkart Section
+              SliverList(
+                delegate: SliverChildListDelegate([
+                  Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                          "More on Flipkart",
+                          style: TextStyle(
+                            fontSize: 18.5,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        color: Colors.grey.shade300,
+                        height: 1,
+                        width: MediaQuery.of(context).size.width - 161,
+                      ),
+                    ],
+                  ),
+                ]),
+              ),
+
+              // More Flipkart Grid View
+              SliverGrid(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 1 / 1.2,
+                ),
+                delegate: SliverChildListDelegate([
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.superCoin,
+                    label: "SuperCoin",
+                    circleColor: Colors.yellow.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.coupons,
+                    label: "Coupons",
+                    circleColor: Colors.red.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.creditCard,
+                    label: "Credit",
+                    circleColor: Colors.blue.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.whatsNew,
+                    label: "what's New",
+                    circleColor: Colors.orange.shade50,
+                    imagePadding: 10,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.fireDrops,
+                    label: "FireDrops",
+                    circleColor: Colors.blue.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.camera,
+                    label: "Camera",
+                    circleColor: Colors.yellow.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.games,
+                    label: "Games",
+                    circleColor: Colors.orange.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.sellerHub,
+                    label: "Become a Seller",
+                    circleColor: Colors.blue.shade50,
+                    imagePadding: 10,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.liveShop,
+                    label: "LiveShop+",
+                    circleColor: Colors.orange.shade50,
+                    imagePadding: 15,
+                  ),
+                  GridViewCategoryItem(
+                    icon: FlipkartIcons.plus,
+                    label: "Plus Zone",
+                    circleColor: Colors.orange.shade50,
+                    imagePadding: 15,
+                  ),
+                ]),
+              ),
             ],
           ),
         ),
