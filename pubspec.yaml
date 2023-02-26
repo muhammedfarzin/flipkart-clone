@@ -65,6 +65,7 @@ flutter:
       - assets/icons/
       - assets/flipkart_icons/
       - assets/category_icons/
+      - assets/trending_stores_icons/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
