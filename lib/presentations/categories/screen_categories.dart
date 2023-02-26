@@ -1,5 +1,6 @@
 import "package:flipkart/assets/category_icons.dart";
 import "package:flipkart/assets/flipkart_icons.dart";
+import "package:flipkart/assets/trending_stores_icons.dart";
 import "package:flipkart/presentations/categories/grid_view_category_item.dart";
 import "package:flipkart/presentations/widgets/constants.dart";
 import "package:flutter/material.dart";
@@ -285,6 +286,56 @@ class ScreenCategories extends StatelessWidget {
                   ),
                 ]),
               ),
+
+              // Trending Stores Section
+              SliverList(
+                delegate: SliverChildListDelegate([
+                  Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                          "Trending Stores",
+                          style: TextStyle(
+                            fontSize: 18.5,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        color: Colors.grey.shade300,
+                        height: 1,
+                        width: MediaQuery.of(context).size.width - 157,
+                      ),
+                    ],
+                  ),
+                ]),
+              ),
+
+              // Trending Stores Grid View
+              SliverPadding(
+                padding: const EdgeInsets.all(10.0),
+                sliver: SliverGrid(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 25,
+                    crossAxisSpacing: 25,
+                    childAspectRatio: 1 / 1,
+                  ),
+                  delegate: SliverChildListDelegate([
+                    Image.asset(TrendingStoresIcons.happyWinter),
+                    Image.asset(TrendingStoresIcons.flipkartSamarth),
+                    Image.asset(TrendingStoresIcons.flipkartGreen),
+                    Image.asset(TrendingStoresIcons.valentinesDay),
+                    Image.asset(TrendingStoresIcons.internationalStore),
+                    Image.asset(TrendingStoresIcons.studentsClub),
+                    Image.asset(TrendingStoresIcons.flipkartOriginals),
+                    Image.asset(TrendingStoresIcons.travelStore),
+                    Image.asset(TrendingStoresIcons.flipkartEmergingBrands),
+                    Image.asset(TrendingStoresIcons.launchHub),
+                  ]),
+                ),
+              )
             ],
           ),
         ),
